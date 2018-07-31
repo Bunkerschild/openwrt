@@ -207,6 +207,19 @@ define Device/qcom_ap-dk04.1-c1
 endef
 TARGET_DEVICES += qcom_ap-dk04.1-c1
 
+define Device/linksys_ea8300
+	$(call Device/FitImage)
+	$(call Device/UbiFit)
+	DEVICE_DTS := qcom-ipq4019-ea8300
+	KERNEL_INSTALL := 1
+	KERNEL_SIZE := 3072k
+	BLOCKSIZE := 128k
+	PAGESIZE := 2048
+	BOARD_NAME := ap-dk07.1-c1
+	DEVICE_TITLE := Linksys EA8300
+endef
+TARGET_DEVICES += linksys_ea8300
+
 define Device/zyxel_nbg6617
 	$(call Device/FitImageLzma)
 	DEVICE_DTS := qcom-ipq4018-nbg6617
