@@ -215,8 +215,10 @@ define Device/linksys_ea8300
 	KERNEL_SIZE := 3072k
 	BLOCKSIZE := 128k
 	PAGESIZE := 2048
-	BOARD_NAME := ap-dk07.1-c1
+	BOARD_NAME := ea8300
+	SUPPORTED_DEVICES += ea8300
 	DEVICE_TITLE := Linksys EA8300
+	DEVICE_PACKAGES := ath10k-firmware-qca9888 uboot-envtools
 endef
 TARGET_DEVICES += linksys_ea8300
 
