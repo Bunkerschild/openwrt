@@ -5,7 +5,7 @@
 # See /LICENSE for more information.
 #
 
-define Profile/EA8300
+define Profile/linksys_ea8300
   NAME:=Linksys EA8300
   PACKAGES:=kmod-leds-gpio kmod-gpio-button-hotplug swconfig \
 	kmod-usb-phy-dwc3-ipq40xx kmod-ath10k wpad-mini \
@@ -14,7 +14,7 @@ define Profile/EA8300
 	kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport \
 	ath10k-firmware-qca4019 uboot-envtools
 endef
-define Profile/EA8300/Description
+define Profile/linksys_ea8300/Description
   Package set optimized for Linksys EA8300.
 endef
-$(eval $(call Profile,EA8300))
+$(eval $(call Profile,linksys_ea8300))
