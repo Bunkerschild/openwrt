@@ -218,7 +218,13 @@ define Device/linksys_ea8300
 	BOARD_NAME := ea8300
 	SUPPORTED_DEVICES += ea8300
 	DEVICE_TITLE := Linksys EA8300
-	DEVICE_PACKAGES := ath10k-firmware-qca9888 uboot-envtools
+	DEVICE_PACKAGES := ath10k-firmware-qca4019 ath10k-firmware-qca9888 uboot-envtools \
+		kmod-leds-gpio kmod-gpio-button-hotplug swconfig \
+	        kmod-usb-phy-dwc3-ipq40xx kmod-ath10k wpad-mini \
+	        kmod-usb3 kmod-usb-dwc3-of-simple kmod-usb-phy-qcom-dwc3 \
+	        kmod-ata-core kmod-ata-ahci kmod-ata-ahci-platform \
+	        kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport
+
 endef
 TARGET_DEVICES += linksys_ea8300
 
